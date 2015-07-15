@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Product Details{% endblock %}
+{% block main %}
+    <img src="{{ MEDIA_URL }}image/product/home.png"/><br/>
+    {{ product_details.name }}<br/>
+    {{ product_details.description }}<br/>
+    ${{ product_details.price }}
+    {{ product_details.listed_by }}
+    {{  }}
+
+{% endblock %}

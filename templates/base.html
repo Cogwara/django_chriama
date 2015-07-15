@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Chriama-{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/content/bootstrap.css" type="text/css"/>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/content/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="{{ STATIC_URL}}css/content/site.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Chriama</h1>
+            <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="http://django.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
+        {% block main %}
+            <p>main content to come</p>
+        {% endblock %}
+    </body>
+</html>
