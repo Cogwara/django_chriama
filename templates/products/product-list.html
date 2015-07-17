@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
 {% block title %}All Items{% endblock %}
 {% block main %}
+    <h2>ALl items</h2>
     {% if products %}
         {% for product in products %}
+            <img src="{{ product.photo }}"/><br/>
             <a href="{% url 'product-detail' product.id %}">{{ product.name }}</a><br/>
-            {{ product.description }}
-            <img src="{{ MEDIA_URL }}image/product/home.png"/>{{ products.photo }}
+            {{ product.description }}<br>
+            {{ product.category }}<br/>
+
+            &#8358;{{ product.price }}<br/>
         {% endfor %}
 
     {% endif %}

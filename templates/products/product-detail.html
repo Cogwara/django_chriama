@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
+{% load admin_urls %}
 
 {% block title %}Product Details{% endblock %}
 {% block main %}
     <img src="{{ MEDIA_URL }}image/product/home.png"/><br/>
     {{ product_details.name }}<br/>
     {{ product_details.description }}<br/>
-    ${{ product_details.price }}
-    {{ product_details.listed_by }}
-    {{  }}
+    &#8358;{{ product_details.price }}<br/>
+    {{ product_details.date_listed}}<br/>
+    {{ product_details.listed_by }}<br/>
+    <a href="{% url 'seller-detail' seller_id %}">Contact Seller</a>
 
 {% endblock %}
